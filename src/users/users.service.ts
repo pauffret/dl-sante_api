@@ -22,14 +22,6 @@ export class UsersService {
         return user;
     }
 
-    async findByEmail(email: string): Promise<UsersDTO> {
-        return await this.usersRepository.findOne({
-            where: {
-                email: email,
-            },
-        });
-    }
-
     async read(id: number) {
         return await this.usersRepository.findOne({ where: { id: id } });
     }
